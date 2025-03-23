@@ -1,0 +1,9 @@
+Command	Purpose
+npx prisma init	 :  Initialize Prisma
+npx prisma generate :	Update Prisma Client
+npx prisma migrate dev --name init	: Create a new migration
+npx prisma migrate deploy :	Apply migrations in production
+npx prisma migrate reset :	Reset database (dev only)
+npx prisma db seed :	Seed database
+npx prisma db pull :	Sync schema with database
+npx prisma studio :	Open Prisma Studio
