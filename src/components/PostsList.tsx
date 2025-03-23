@@ -11,10 +11,6 @@ export default async function PostsList() {
   const { posts } = await getPosts();
   const dbUserId = await getDBUserId();
 
-  //   if (!posts || posts.length === 0) {
-  //     return;
-  //   }
-
   console.log({ posts });
 
   return (

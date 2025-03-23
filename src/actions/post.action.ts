@@ -12,6 +12,7 @@ export type PostType = PostsType[number];
 export async function createPost(content: string, image: string) {
   try {
     const userId = await getDBUserId();
+
     const post = await prisma.post.create({
       data: {
         content,

@@ -91,7 +91,7 @@ model Follows {
 
   //relation
   follower  User @relation("follower", fields: [followerId], references: [id], onDelete: Cascade)
-  following User @relation("following", fields: [followingId], references: [id], onDelete: Cascade)
+  following User @relation("following", fields: [followingId], references: [id], onDelete: Cascade) // users that follow this user
 
   @@id([followerId, followingId]) // composite primary key
   @@index([followerId, followingId])
