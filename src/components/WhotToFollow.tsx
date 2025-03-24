@@ -7,17 +7,19 @@ import FollowButton from "./FollowButton";
 async function WhoToFollow() {
   const users = await getRecommandedUsers();
 
-  if (users.length === 0) return null;
-
   return (
     <Card>
       <CardHeader>
         <CardTitle>Who to Follow</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="space-y-4">
-          {users.map(user => WhoToFollwCardContent(user))}
-        </div>
+        {users.length === 0 ? (
+          <div>No body to Follow</div>
+        ) : (
+          <div className="space-y-4">
+            {users.map(user => WhoToFollwCardContent(user))}
+          </div>
+        )}
       </CardContent>
     </Card>
   );

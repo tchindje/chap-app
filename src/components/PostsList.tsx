@@ -14,7 +14,7 @@ export default async function PostsList() {
   console.log({ posts });
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-10">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-10">
       <div className="lg:col-span-6">
         {user && <CreatePost />}
         <div className="space-y-6">
