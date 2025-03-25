@@ -140,13 +140,13 @@ function PostCard({
 
           {/* POST IMAGE */}
           {post.image && (
-            <div className="overflow-hidden rounded-lg">
+            <div className="max-h-[500px] scale-80 overflow-auto rounded-lg">
               <Image
                 src={post.image}
                 alt="Post content"
                 layout="responsive"
-                width={700}
-                height={475}
+                width={100}
+                height={100}
                 className="h-auto w-full object-cover"
               />
             </div>
