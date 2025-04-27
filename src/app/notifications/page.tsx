@@ -71,7 +71,11 @@ export default function NotificationsPage() {
           <div className="flex items-center justify-between">
             <CardTitle>Notifications</CardTitle>
             <span className="text-muted-foreground text-sm">
-              {notifications.filter(n => n.read === false).length} unread
+              {
+                notifications.filter((n: NotificationType) => n.read === false)
+                  .length
+              }{" "}
+              unread
             </span>
           </div>
         </CardHeader>
