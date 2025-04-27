@@ -28,6 +28,8 @@ const getNotificationIcon = (type: string) => {
   }
 };
 
+type NotificationType = Awaited<ReturnType<typeof getNotifications>>[number];
+
 export default function NotificationsPage() {
   const [notifications, setNotificattions] = useState<NotificationsType>([]);
   const [isLoading, setisLoading] = useState(false);
@@ -40,7 +42,9 @@ export default function NotificationsPage() {
         const notifications = await getNotifications();
         setNotificattions(notifications);
 
-        const unreadIds = notifications.filter(n => !n.read).map(n => n.id);
+        const unreadIds = notifications
+          .filter((n: NotificationType) => !n.read)
+          .map((n: NotificationType) => n.id);
         if (unreadIds.length > 0) {
           await markNotificationsAsRead(unreadIds);
         }
