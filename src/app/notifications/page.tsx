@@ -87,7 +87,7 @@ export default function NotificationsPage() {
                 No notifications yet
               </div>
             ) : (
-              notifications.map(notification => (
+              notifications.map((notification: NotificationType) => (
                 <div
                   key={notification.id}
                   className={`hover:bg-muted/25 flex items-start gap-4 border-b p-4 transition-colors ${
