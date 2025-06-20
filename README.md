@@ -43,7 +43,7 @@ A modern social networking platform built with:
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Eric-Tchindje/tchap-app.git
+git clone https://github.com/tchindje/tchap-app.git
 cd tchap-app
 url  https://tchap-app-final.vercel.app/
 
